@@ -1,0 +1,249 @@
+
+@font-face {
+    font-family: 'MyFont';
+	src: url(../font/MTLmr3m.ttf);
+}
+*{
+	font-family: MyFont;
+		font-size:15px;
+				box-sizing: border-box;
+
+}
+			::-webkit-scrollbar {
+		display: none;
+	}
+html{
+	width:100%;
+	height:100%;
+
+}
+body{
+	width:100%;
+	height:100%;
+    margin:0;
+	overflow: hidden;
+}
+#contents{
+	height:100%;
+}
+/*nav のスタイル*/
+nav {
+	overflow: visible;
+	background: #f8f8f8;
+	border-bottom:solid 1px;
+}
+/*最上位メニュー*/
+nav ul{
+  list-style-type: none;
+  width: 100%;
+  height: 30px;
+  margin:0;
+  margin-left:10px;
+  padding: 0;
+}
+nav ul li{
+  position: relative;
+  width: 100px;
+  float: left;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/*サブメニュー*/
+nav ul li ul{
+  width:100px;
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  height:0px;
+  left: 0;
+  margin: 0;
+  padding: 0;
+}
+nav ul li ul li{
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  margin:0;
+  color: #fff;
+  transition: 0.5s;
+}
+nav ul li:hover ul li{
+  overflow: visible;
+  height: 30px;
+}
+/*メニュー中のボタン*/
+ nav button{
+  width:200px;
+  height:30px;
+  margin:0;
+  background-color: #fff;
+  border:0px;
+  border-top:2px solid #ddd;
+  border-bottom:2px solid #999;
+  border-right:2px solid #777;
+  border-left:2px solid #bbb;
+  font-size:100%;
+ }
+ nav button.menuButton{
+  width:100px;
+ }
+ nav button:hover{
+  box-shadow:0px 0px 2px 2px  rgba(0,0,0,0.2) inset;
+}
+nav ul li:hover button.menuButton{
+  background-color: #ddd;
+}
+/*メニュー中のボタン*/
+ nav input[type="file"]{
+  width:200px;
+  height:30px;
+  margin:0;
+  background-color: #fff;
+  border:0px;
+  border-top:2px solid #ddd;
+  border-bottom:2px solid #999;
+  border-right:2px solid #777;
+  border-left:2px solid #bbb;
+  text-align: center;
+  font-size:100%;
+ }
+ nav input[type="file"].menuButton{
+  width:100px;
+ }
+ nav input[type="file"]:hover{
+  box-shadow:0px 0px 2px 2px  rgba(0,0,0,0.2) inset;
+}
+nav ul li:hover input[type="file"].menuButton{
+  background-color: #ddd;
+}
+
+#mainFrame{
+	width:100%;
+	height:100%;
+}
+#contents #main {
+	overflow: hidden;
+	background: #d49fc2;
+}
+	#contents #main article {
+		overflow: hidden;
+		padding: 10px;
+	}
+#contents aside {
+	overflow: hidden;
+	background: #ccc;
+}
+aside ul {
+		margin-left:1em;
+		margin-bottom:1em;
+		padding:0;
+	}
+aside li{
+	list-style:none;
+	line-height:1.5em;
+}	
+	
+footer {
+	overflow: hidden;
+	border-top: 2px solid #9fb7d4;
+}
+	footer #copyright {
+		padding: 10px;
+	}
+/**/
+
+#contents #main {
+	display:inline-block;
+	width: calc(100% - 160px);
+	height:calc(100% - 40px);;
+	overflow: hidden;
+	background: #ccc;
+}
+#contents #main article {
+	padding: 10px;
+}
+#contents aside {
+	display:inline-block;
+	width: 150px;
+	overflow: hidden;
+	background: #fff;
+	vertical-align: top;
+}
+	#contents aside p {
+		padding: 10px;
+	}
+#main iframe{
+	height:100%;
+	width:100%;
+}
+.android{
+	display:none;
+}
+@media (max-width:500px) {
+	body{
+		width:100%;
+		overflow-y: scroll;
+	}
+	nav ul li{
+  position: relative;
+
+  width: 110px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+}
+#contents aside {
+	display:block;
+    width:100%;
+	overflow: hidden;
+	background: #fff;
+}
+nav ul{
+	height:auto;
+}
+nav ul li ul li{
+	z-index:10;
+}
+#contents #main {
+	display:block;
+	overflow:scroll;
+	width:100%;
+	max-height:calc(100% - 40px);
+		background: #ccc;
+		border-top:solid 1px;
+				border-bottom:solid 1px;
+
+}
+#contents #main article {
+		overflow:scroll;
+		padding: 0px;
+	}
+#mainFrame{
+	width:100%;
+	height:auto;
+}
+ nav button{
+  width:300px;
+  height:40px;
+  margin:0;
+  background-color: #fff;
+  border:0px;
+  border-top:2px solid #ddd;
+  border-bottom:2px solid #999;
+  border-right:2px solid #777;
+  border-left:2px solid #bbb;
+  font-size:120%;
+ }
+ nav button.menuButton{
+  width:110px;
+ }
+ nav ul li:hover ul li{
+  height: 40px;
+}
+.android{
+	display:block;
+}
+
+}

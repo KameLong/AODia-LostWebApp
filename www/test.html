@@ -1,0 +1,41 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		
+		@font-face {
+			font-family: 'MyFont';
+			src: url(./font/MTLmr3m.ttf);
+		}
+		
+		* {
+			font-family: MyFont;
+			font-size: 15px;
+		}
+	</style>
+	<script src="test.js">
+
+	</script>
+	<script>
+		window.onload=function(){
+			console.log("onload");
+			var touch=new TouchEvent(document.getElementById("result"));
+			var element=document.getElementById("result");
+			element.addEventListener("doubleScroll",function(e){console.log(e.scrollY);},false);
+		}
+		</script>
+</head>
+
+<body>
+	<div id="result" style="height:700px">
+		test;
+	</div>
+</body>
+
+</html>

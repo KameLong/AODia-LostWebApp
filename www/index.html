@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+<link rel="stylesheet" href="components/loader.css">
+
+	<link rel="stylesheet" href="css/style.css">
+    <script src="components/loader.js"></script>
+	<script src="js/diaView.js"></script>
+	<script src="js/diagram.js"></script>
+	<script src="js/station.js"></script>
+	<script src="js/trainType.js"></script>
+	<script src="js/timetable.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/touch.js"></script>
+</head>
+<body>
+<div id="contents">
+	<nav>
+		<ul>
+			<li>
+				<button class="menuButton">ファイル</button>
+				<ul>
+					<li><button id="newButton">新規作成</button></li>
+					<li> <button id="openButton">開く</button><input type="file" id="fileOpen" style="display:block"></li>
+					<li> <button id="openOudButton">Oudiaファイルを開く</button><input type="file" id="fileOudOpen" style="display:none"></li>
+					<li> <button id="savaAsNameButtonQ">名前を付けて保存</button> </li>
+					<li> <button id="saveButton">ダウンロード</button> </li>
+					<li> <a id="download"></a></li>
+				</ul>
+			</li>
+			<li> <button class="menuButton android" id="menuButton">メニュー</button>
+			</li>
+		</ul>
+	</nav>
+	<aside id="sideMenu">
+	</aside>
+	<div id="main">
+	</div>
+	</body>
+
+</html>

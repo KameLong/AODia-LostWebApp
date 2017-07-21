@@ -1,0 +1,83 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+</head>
+<style>
+		@font-face {
+			font-family: 'MyFont';
+			src: url(./font/MTLmr3m.ttf);
+		}
+		
+		* {
+			font-family: MyFont;
+			box-sizing: border-box;
+			font-size: 15px;
+		
+		}
+			body {
+			width: 350px;
+			height: 200px;
+			background-color: #eee;
+			margin: 0;
+			overflow:visible;
+		}
+			header {
+			background-color: #fff;
+			padding: 5px;
+			width: 100%;
+		}
+		
+		#title {
+			display: inline-block;
+			width: 320px;
+		}
+		
+		#close {
+			display: inline-block;
+		}
+		#flex{
+			display:flex;
+			margin:10px;
+		}
+		#diaList{
+			background-color: #fff;
+			width:200px;
+			line-height:1.4em;
+			padding-left:0.4em;
+			border:1px solid #ccc;
+		}
+		#buttonList{
+			margin-left:10px;
+		}
+				button {
+			width: 100px;
+			margin: 4px;
+			padding:2px;
+			margin-left: 10px;
+			font-size: 100%;
+		}
+</style>
+</head>
+
+<body>
+	<header>
+		<div id="title" draggable="true">ダイヤ一覧</div>
+	<div id="close">X</div>
+	</header>
+	<div id="flex">
+	<div id="diaList">
+		<div class="list">阪急</div>
+		<div class="list">JR</div>
+		</div>
+		<div id="buttonList">
+			<button>新規作成</button><br>
+			<button>プロパティ</button><br>
+			<button>削除</button><br>
+			<button>上へ</button><br>
+			<button>下へ</button><br>
+			</div>
+			</div>
+</body>
+
+</html>

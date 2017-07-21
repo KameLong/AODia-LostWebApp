@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "AOdia",
+    "description": "Android Oudia",
+    "version": "0.1.0",
+    "app": {
+        "background": {
+            "scripts": [
+                "background.js"
+            ]
+        }
+    },
+    "icons": {
+        "128": "icon.png"
+    },
+    "permissions": [
+        "clipboardWrite",
+        "clipboardRead",
+        "unlimitedStorage"
+    ],
+    "short_name": "AOdia",
+    "offline_enabled": false,
+    "optional_permissions": [],
+    "externally_connectable": {
+        "ids": [],
+        "matches": [],
+        "accepts_tls_channel_id": false
+    }
+}

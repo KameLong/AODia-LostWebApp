@@ -1,0 +1,60 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<style>
+				* {
+			box-sizing: border-box;
+		}
+		@font-face {
+    font-family: 'MyFont';
+	src: url(./font/MTLmr3m.ttf);
+}
+*{
+	font-family: MyFont;
+	font-size:15px;
+}
+	body{
+		background-color:#eee; 
+	}
+#trainTypeTable td{
+	background-color: #fff;
+	height:26px;
+}
+#trainTypeDetail{
+	width:350px;
+	height:200px;
+	position:absolute;
+	top:100px;
+	left:100px;
+	padding:0;
+	z-index: 2;
+	display:none;
+	border:2px solid #bbb;
+}
+		@media (max-width:500px) {
+			#stationDetail{
+				left:4px;
+			}
+		}
+</style>
+</head>
+<body>
+<div id="detail">
+<iframe  id="trainTypeDetail"  src="trainTypeDetail.html" marginwidth="0" marginheight="0"name="trainTypeDetail"></iframe>
+</div>
+<table border="1" cellspacing="0" cellpadding="4" id="trainTypeTable">
+	<tr>
+		<th width="30px"></th>
+		<th width="150px">列車種別名</th>
+		<th width="50px">略称</th>
+		<th width="100px">ダイヤ線色</th>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+</body>
+</html>

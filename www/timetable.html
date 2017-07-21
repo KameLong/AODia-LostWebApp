@@ -1,0 +1,209 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+		
+		@font-face {
+			font-family: 'MyFont';
+			src: url(./font/MTLmr3m.ttf);
+		}
+		
+		* {
+			font-family: MyFont;
+			font-size: 15px;
+		}
+		
+		.box {
+			display: flex;
+			flex-wrap: nowrap;
+		}
+		
+		body {
+			overflow: hidden;
+			background-color: #fff;
+		}
+		
+		.colunm {
+			width: 40px;
+			flex: none;
+			border-right: solid 1px #000;
+		}
+		
+		#trainTime .colunm {
+			border-bottom: solid 2px #000;
+		}
+		
+		#trainName .colunm {
+			border-top: 2px solid #000;
+		}
+		
+		.scroll {
+			width: calc(100% - 100px);
+			overflow: scroll;
+		}
+		
+		#title {
+			width: 100px;
+			border-left: 2px solid;
+			border-top: 2px solid;
+			border-right: 2px solid;
+		}
+		
+		#title td {
+			border-bottom: solid 1px;
+			height: 20px;
+		}
+		
+		#trainName td {
+			border-bottom: solid 1px #000;
+			height: 20px;
+		}
+		
+		#topDiv {
+			display: flex;
+			flex-wrap: nowrap;
+		}
+		
+		#bottomDiv {
+			display: flex;
+			flex-wrap: nowrap;
+		}
+		
+		#stationName {
+			width: 100px;
+		}
+		
+		#stationNameDiv {
+			overflow: scroll;
+			width: 100px;
+			border-left: 2px solid;
+			border-right: 2px solid;
+			height: calc(100% - 140px);
+		}
+		
+		td {
+			padding: 0;
+			white-space: nowrap;
+			height: 19px;
+		}
+		
+		td.main {
+			height: 39px;
+		}
+		
+		#trainName td.trainName {
+			height: 100px;
+		}
+		
+		#title td.trainName {
+			height: 100px;
+		}
+		
+		table {
+			border-collapse: collapse;
+		}
+		
+		.scroll td {
+			width: 39px;
+			text-align: center;
+		}
+		
+		.scroll td.arrive {
+			border-bottom: 1px solid #000;
+			height: 20px;
+		}
+		
+		#trainTimeDiv {
+			height: calc(100% - 140px);
+		}
+		
+		::-webkit-scrollbar {
+			display: none;
+		}
+		
+		.arrive {
+			height: 20px;
+			padding-top: 1px;
+			border-bottom: 1px solid #000;
+			text-align: center;
+		}
+		
+		.depart {
+			padding-top: 1px;
+			height: 19px;
+			text-align: center;
+		}
+		
+		#trainTimeDetail {
+			width: 350px;
+			height: 200px;
+			position: absolute;
+			top: 200px;
+			left: 100px;
+			border: 2px solid #bbb;
+		}
+		
+		@media (max-width:500px) {
+			.scroll {
+				width: calc(100% - 50px);
+			}
+			#title {
+				width: 50px;
+			}
+			#stationName {
+				width: 50px;
+			}
+			#stationNameDiv {
+				width: 50px;
+			}
+			#trainTimeDetail {
+				left: 5px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<iframe src="trainTimeDetail.html" id="trainTimeDetail" style="display:none"></iframe>
+	<div id="topDiv">
+		<div id="title">
+			<table style="width:100%">
+				<tr>
+					<td>列車番号</td>
+				</tr>
+				<tr>
+					<td>列車種別</td>
+				</tr>
+				<tr>
+					<td class="trainName">列車名</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="scroll" id="trainNameDiv">
+			<div class="box" id="trainName">
+
+			</div>
+		</div>
+	</div>
+	<div id="bottomDiv">
+		<div id="stationNameDiv">
+			<div style="border-bottom:2px solid;">
+				<table id="stationName">
+
+				</table>
+			</div>
+		</div>
+		<div class="scroll clusterize-scroll" id="trainTimeDiv">
+			<div class="box clusterize-content" id="trainTime">
+
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
